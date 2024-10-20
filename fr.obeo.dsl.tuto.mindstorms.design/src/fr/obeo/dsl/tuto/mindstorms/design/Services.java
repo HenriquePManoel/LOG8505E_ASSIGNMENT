@@ -8,6 +8,10 @@ import fr.obeo.dsl.tuto.mindstorms.Instruction;
 
 import fr.obeo.dsl.tuto.mindstorms.Choreography;
 
+import fr.obeo.dsl.tuto.mindstorms.Rotate;
+
+import fr.obeo.dsl.tuto.mindstorms.GoForward;
+
 /**
  * The services class used by VSM.
  */
@@ -23,6 +27,23 @@ public class Services {
 		else {
 			return actions.get(position+1);
 		}
+	}
+	
+	public String getLabel(Instruction instruction) {		
+		if (instruction instanceof GoForward) {
+			return ((GoForward)instruction).getCm()+" cm";
+		}
+		else if (instruction instanceof Rotate) {
+			if (((Rotate)instruction).isRandom())
+				return "?";
+			else
+				return ((Rotate)instruction).getDegrees()+"°";
+		}
+		else if (instruction instanceof Choreography) {
+			return ((Choreography)instruction).getName();
+		}
+		else
+			return "";
 	}
     
     /**
