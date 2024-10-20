@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mindstorms:Choreography xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mindstorms="http://www.obeo.fr/dsl/mindstorms/1.0.0">
+  <instructions xsi:type="mindstorms:Rotate" degrees="45"/>
+</mindstorms:Choreography>
